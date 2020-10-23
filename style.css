@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #200045;
+}
+
+.grass {
+    display: inline-block;
+    height: 150px;
+    width: 300px;
+    background-color: transparent;
+}
+
+.bush {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-column-gap: 60px;
+}
+
+.petals {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 30px;
+    box-shadow: 12px -10px 0 0 #8AFF9A;
+    background-color: transparent;
+}
+
+.petals::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 20px;
+    top: 40px;
+    box-shadow: 6px -15px 0 0 #8AFF9A;
+}
+
+.petals::after {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 35px;
+    bottom: 40px;
+    box-shadow: 20px -5px 0 0 #8AFF9A;
+}
+
+.petal-two {
+    transform: scaleX(-1);
+}
+
+
+.bush1 {
+
+    display: none;
+
+
+    transform: scale(.4);
+    position: absolute;
+    bottom: 20vmin;
+    right: 0;
+}
+
+.lowland {
+    position: fixed;
+    bottom: 0;
+    height: 30vmin;
+    width: 100vw;
+    border-radius: 100% 0 0 0;
+    background: repeating-linear-gradient(-20deg,
+            hsl(33, 100%, 88%) 0px,
+            hsl(34, 57%, 70%) 18px,
+            hsl(34, 57%, 70%) 30px,
+            hsl(32, 100%, 88%) 45px);
+    z-index: 2;
+}
+
+.highland {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 45vmin;
+    width: 60vw;
+    border-radius: 0 100% 0 0;
+    background: repeating-linear-gradient(10deg,
+            hsl(33, 100%, 88%) 0px,
+            hsl(34, 57%, 70%) 8px,
+            hsl(34, 57%, 70%) 15px,
+            hsl(32, 100%, 88%) 25px);
+    z-index: 1;
+}
+
+
+
+#moon {
+    height: 15vmin;
+    width: 15vmin;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 10px 10px 2px 0 #ddd;
+}
+
+.moon-position {
+    position: fixed;
+    left: 55vw;
+    top: 5vh;
+}
