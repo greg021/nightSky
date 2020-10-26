@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #200045;
+    background-color: #030d1f;
 }
 
 .grass {
@@ -99,7 +99,6 @@ body {
 }
 
 
-
 #moon {
     height: 15vmin;
     width: 15vmin;
@@ -112,4 +111,33 @@ body {
     position: fixed;
     left: 55vw;
     top: 5vh;
+    z-index: 1;
+}
+
+
+.star {
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+}
+
+.star:hover {
+    cursor: none;
+    transform: scale(1.5);
+    background-color: #ffb3b3;
+}
+
+.small {
+    height: 2px;
+    width: 2px;
+}
+
+.medium {
+    height: 3px;
+    width: 3px;
+}
+
+.large {
+    height: 5px;
+    width: 5px;
 }

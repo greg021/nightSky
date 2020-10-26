@@ -11,7 +11,7 @@
 <body>
     <div class="bg-graphics">
 
-        <div class="sky">
+        <div class="sky" id="starry">
             <div id="moon" class="moon-position"></div>
         </div>
 
@@ -30,6 +30,60 @@
 
         </div>
     </div>
+
+
+    <script>
+
+        for (i = 1, c = 0; c < 60; c++, i *= c) {
+            if (c < 10) {
+                const ib = document.createElement('s');
+                const pos = 'l' + c;
+                ib.classList.add('star', 'large', pos);
+                const cb = document.getElementById('starry');
+                cb.appendChild(ib);
+
+                console.log((Math.random()*1000)%100 + '%');
+                console.log((Math.random()*1000)%100  + '%');
+
+                const posTop = document.querySelector('.'+pos);
+                posTop.style.top = (Math.random()*1000)%100 + '%';
+                const posLeft =  document.querySelector('.'+pos);
+                posLeft.style.left = (Math.random()*1000)%100 + '%';
+            }
+            else if (c < 30) {
+                const ib = document.createElement('s');
+                const pos = 'm' + (c-10);
+                ib.classList.add('star', 'medium', pos);
+                const cb = document.getElementById('starry');
+                cb.appendChild(ib);
+
+                console.log((Math.random()*1000)%100 + '%');
+                console.log((Math.random()*1000)%100 + '%');
+
+                const posTop = document.querySelector('.'+pos);
+                posTop.style.top = (Math.random()*1000)%100 + '%';
+                const posLeft =  document.querySelector('.'+pos);
+                posLeft.style.left = (Math.random()*1000)%100 + '%';
+            }
+            else{
+                const ib = document.createElement('s');
+                const pos = 's' + (c-30);
+                ib.classList.add('star', 'small', pos);
+                const cb = document.getElementById('starry');
+                cb.appendChild(ib);
+
+                console.log((Math.random()*1000)%100 + '%');
+                console.log((Math.random()*1000)%100 + '%');
+
+                const posTop = document.querySelector('.'+pos);
+                posTop.style.top = (Math.random()*1000)%100 + '%';
+                const posLeft =  document.querySelector('.'+pos);
+                posLeft.style.left = (Math.random()*1000)%100 + '%';
+            }
+        }
+    </script>
+
+
 </body>
 
 </html>
