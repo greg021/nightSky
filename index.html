@@ -31,9 +31,7 @@
         </div>
     </div>
 
-
     <script>
-
         for (i = 1, c = 0; c < 60; c++, i *= c) {
             if (c < 10) {
                 const ib = document.createElement('s');
@@ -41,9 +39,6 @@
                 ib.classList.add('star', 'large', pos);
                 const cb = document.getElementById('starry');
                 cb.appendChild(ib);
-
-                console.log((Math.random()*1000)%100 + '%');
-                console.log((Math.random()*1000)%100  + '%');
 
                 const posTop = document.querySelector('.'+pos);
                 posTop.style.top = (Math.random()*1000)%100 + '%';
@@ -57,9 +52,6 @@
                 const cb = document.getElementById('starry');
                 cb.appendChild(ib);
 
-                console.log((Math.random()*1000)%100 + '%');
-                console.log((Math.random()*1000)%100 + '%');
-
                 const posTop = document.querySelector('.'+pos);
                 posTop.style.top = (Math.random()*1000)%100 + '%';
                 const posLeft =  document.querySelector('.'+pos);
@@ -72,9 +64,6 @@
                 const cb = document.getElementById('starry');
                 cb.appendChild(ib);
 
-                console.log((Math.random()*1000)%100 + '%');
-                console.log((Math.random()*1000)%100 + '%');
-
                 const posTop = document.querySelector('.'+pos);
                 posTop.style.top = (Math.random()*1000)%100 + '%';
                 const posLeft =  document.querySelector('.'+pos);
@@ -82,8 +71,6 @@
             }
         }
     </script>
-
-
 </body>
 
 </html>
